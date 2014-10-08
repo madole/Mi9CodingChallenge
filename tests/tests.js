@@ -2,7 +2,6 @@
 var assert  = require('assert');
 var request = require('supertest');
 var app     = require('../app/index');
-var port    = 8000;
 var http    = require('http');
 
 var responsePayload = {
@@ -276,20 +275,6 @@ var payload = {
   "take": 10,
   "totalRecords": 75
 };
-//
-//before (function (done) {
-//  app.listen(port, function (err, result) {
-//    if (err) {
-//      done(err);
-//    } else {
-//      done();
-//    }
-//  });
-//});
-//
-//after(function (done) {
-//  app.close();
-//});
 
 describe('Mi9 Coding Challenge Tests', function() {
   it('should exist', function (done) {
