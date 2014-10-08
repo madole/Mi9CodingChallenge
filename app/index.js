@@ -69,7 +69,7 @@
    * @param {Object} res
    */
   function codingChallenge(req, res) {
-    var payload;
+    var payload, responsePayload;
     if (!req.is('json')) {
       errResponse(res);
       return;
@@ -81,8 +81,13 @@
       errResponse(res);
       return;
     }
+
+    responsePayload = {
+      response: payload
+    };
+
     res.header(200);
-    res.send(payload);
+    res.send(responsePayload);
   }
 
   /**
