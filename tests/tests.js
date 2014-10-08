@@ -3,6 +3,10 @@ var assert  = require('assert');
 var request = require('supertest');
 var app     = require('../app/index');
 
+var errorBody = {
+  "error": "Could not decode request: JSON parsing failed"
+};
+
 var responsePayload = {
   "response": [
     {
@@ -275,7 +279,12 @@ var payload = {
   "totalRecords": 75
 };
 
+function hasCorrectErrorBody (res) {
+  return (res.body === errorBody);
+}
+
 describe('Mi9 Coding Challenge Tests', function() {
+
   it('should exist', function (done) {
     assert.ok(app);
     done();
@@ -285,6 +294,14 @@ describe('Mi9 Coding Challenge Tests', function() {
     request(app)
       .post('/')
       .expect('Content-Type', /json/)
+      .expect(400, done);
+  });
+
+  it('should call express with no payload and get a 400 and the correct error response', function(done) {
+    request(app)
+      .post('/')
+      .expect('Content-Type', /json/)
+      .expect(hasCorrectErrorBody)
       .expect(400, done);
   });
 
