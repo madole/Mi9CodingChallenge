@@ -279,10 +279,25 @@ var payload = {
   "totalRecords": 75
 };
 
+/**
+ * This function compares the response body to the predefined
+ * error response errorBody
+ * @param res
+ * @returns {boolean} true if they match
+ */
 function hasCorrectErrorBody (res) {
   return (res.body === errorBody);
 }
 
+/**
+ * This function compares the response body with the predefined
+ * response responsePayLoad
+ * @param res
+ * @returns {boolean} true if they match
+ */
+function hasResponsePayload(res) {
+  return (res.body === responsePayload)
+}
 describe('Mi9 Coding Challenge Tests', function() {
 
   it('should exist', function (done) {
@@ -318,10 +333,6 @@ describe('Mi9 Coding Challenge Tests', function() {
       .expect('Content-Type', /json/)
       .expect(hasResponsePayload)
       .expect(200, done);
-
-    function hasResponsePayload(res) {
-      return (res.body === responsePayload)
-    }
   })
 })
 
