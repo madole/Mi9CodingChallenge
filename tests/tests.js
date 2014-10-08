@@ -2,7 +2,6 @@
 var assert  = require('assert');
 var request = require('supertest');
 var app     = require('../app/index');
-var http    = require('http');
 
 var responsePayload = {
   "response": [
