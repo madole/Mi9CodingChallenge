@@ -39,6 +39,7 @@
    */
   function filterAndMapPayload(jsonObj) {
     var payload;
+    console.log('----------------------')
     if (!jsonObj || !jsonObj.payload) {
       console.log('filterAndMapPayload : Invalid JSON Object');
       return;
@@ -69,7 +70,6 @@
    */
   function codingChallenge(req, res) {
     var payload;
-
     if (!req.is('json')) {
       errResponse(res);
       return;
@@ -89,7 +89,10 @@
    * Here we tell express to use the bodyParser.json middleware
    */
   app.use(bodyParser.json());
-
+  app.use(function(err, req, res, next){
+    console.error(err.stack);
+    errResponse(res);
+  });
   /**
    * Here we tell express accept requests from any origin to
    * avoid CORS errors
