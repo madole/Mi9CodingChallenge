@@ -93,10 +93,15 @@
    * Here we tell express to use the bodyParser.json middleware
    */
   app.use(bodyParser.json());
+
+  /**
+   * Here we add an error handling middleware
+   */
   app.use(function(err, req, res, next){
     console.error(err.stack);
     errResponse(res);
   });
+
   /**
    * Here we tell express accept requests from any origin to
    * avoid CORS errors
