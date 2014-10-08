@@ -1,8 +1,8 @@
 (function () {
   var express   = require('express'),
     bodyParser  = require('body-parser'),
-    app         = express(),
     port        = Number(process.env.PORT || 8000),
+    app  = module.exports = express(),
     server;
 
 

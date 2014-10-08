@@ -7,7 +7,7 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha tests/tests.js ",
     "start": "node app/index.js"
   },
   "author": "Andrew McDowell <madoliole@gmail.com> (http://madole.github.io/)",
@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "connect": "^3.2.0",
+    "express-mock-request": "0.0.2",
     "qunit": "^0.7.5"
   }
 }
