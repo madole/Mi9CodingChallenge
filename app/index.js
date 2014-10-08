@@ -49,7 +49,7 @@
 
   /**
    * This function abstracts out the error response so we
-   * don't duplicate the code when we call hit an error state at different
+   * don't duplicate the code when we hit an error state at different
    * stages of our code path
    * @param {Object} res - the response object
    */
