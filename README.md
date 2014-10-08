@@ -8,6 +8,7 @@ Creating a JSON-based webservice to filter a JSON payload and return a valid JSO
 - Express
 - BodyParser (Express Middleware)
 - PostMan (For sending HTTP Posts)
+- Mocha (For tests)
 - SuperTest (for testing the http server calls)
 - JSHint
 
