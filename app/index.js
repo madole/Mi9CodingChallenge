@@ -55,7 +55,7 @@
    */
   function errResponse(res) {
     res.status(400);
-    res.setHeader('application/json');
+    res.set('Content-Type', 'application/json');
     res.send({
       "error": "Could not decode request: JSON parsing failed"
     });
