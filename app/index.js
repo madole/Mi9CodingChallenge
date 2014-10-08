@@ -39,7 +39,6 @@
    */
   function filterAndMapPayload(jsonObj) {
     var payload;
-    console.log('----------------------')
     if (!jsonObj || !jsonObj.payload) {
       console.log('filterAndMapPayload : Invalid JSON Object');
       return;
