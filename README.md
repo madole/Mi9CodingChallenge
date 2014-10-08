@@ -1,5 +1,5 @@
-Mi9CodingChallenge
-==================
+Mi9 Coding Challenge
+=====================
 
 Creating a JSON-based webservice to filter a JSON payload and return a valid JSON response. 
 
