@@ -55,7 +55,10 @@
    */
   function errResponse(res) {
     res.status(400);
-    res.send('Oops, something went wrong'); //todo: figure out what to send back
+    res.setHeader('application/json');
+    res.send({
+      "error": "Could not decode request: JSON parsing failed"
+    });
   }
 
   /**
