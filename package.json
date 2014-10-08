@@ -14,12 +14,10 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.9.0",
-    "express": "^4.9.5",
-    "lodash": "^2.4.1"
+    "express": "^4.9.5"
   },
   "devDependencies": {
     "connect": "^3.2.0",
-    "express-mock-request": "0.0.2",
-    "qunit": "^0.7.5"
+    "supertest": "^0.14.0"
   }
 }
