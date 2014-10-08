@@ -1,0 +1,23 @@
+{
+  "name": "Mi9_Assessment",
+  "version": "0.0.0",
+  "description": "This is a Mi9 coding challenge to write a JSON web service",
+  "main": "app/index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Andrew McDowell <madoliole@gmail.com> (http://madole.github.io/)",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.9.0",
+    "express": "^4.9.5",
+    "lodash": "^2.4.1"
+  },
+  "devDependencies": {
+    "connect": "^3.2.0",
+    "qunit": "^0.7.5"
+  }
+}
